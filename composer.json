@@ -7,6 +7,11 @@
   "license": "LGPL-3.0+",
   "authors":[
     {
+      "name":"DMKZWO GmbH",
+      "website":"www.dmkzwo.de",
+      "role": "Project Leader"
+    },
+    {
       "name":"Thomas Schabacher",
       "role": "Developer"
     }
