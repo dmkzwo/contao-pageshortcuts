@@ -15,7 +15,7 @@ class BackendAjax extends Backend {
 	 * Run the controller
 	 */
 	public function run() {
-  
+
     $mode = $_GET['mode'];
     $pageId = $_GET['id'];
 
@@ -53,6 +53,9 @@ class BackendAjax extends Backend {
 	}
 
 	protected function checkPermission($pageId) {
+
+	  $this->import('Database');
+    $this->import('BackendUser', 'User');
 
     $objPage = $this->Database->prepare("SELECT * FROM tl_page WHERE id=?")
       ->limit(1)
