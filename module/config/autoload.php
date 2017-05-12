@@ -1,0 +1,4 @@
+<?php
+
+TemplateLoader::addFiles(array(
+));

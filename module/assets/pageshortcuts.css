@@ -1,0 +1,11 @@
+.tl_file a.index, .tl_file a.follow, .tl_file a.noindex, .tl_file a.nofollow, .tl_file a.nocache, .tl_file a.cache, .tl_file a.nosearch, .tl_file a.search, .tl_file a.nositemap, .tl_file a.sitemap { font-size: 11px; }
+
+.tl_file a.index, .tl_file a.follow, .tl_file a.search, .tl_file a.sitemap { padding: 0px 2px 0px 2px; background-color: green; color: #ffffff; width: 10px; text-align: center; margin-right: 1px; }
+
+.tl_file a.noindex, .tl_file a.nofollow, .tl_file a.nocache, .tl_file a.nosearch, .tl_file a.nositemap { padding: 0px 2px 0px 2px; background-color: #d30a0a; color: #ffffff; width: 10px; text-align: center; margin-right: 1px; }
+
+.tl_file a.cache { padding: 0px 2px 0px 2px; background-color: green; color: white; width: 10px; text-align: center; margin-right: 1px; }
+
+.tl_file a.parentcache { padding: 0px 2px 0px 2px; background-color: #888888; color: white; width: 10px; text-align: center; margin-right: 1px; }
+
+.tl_file a.index:hover, .tl_file a.index:focus { color: #ffffff; }
