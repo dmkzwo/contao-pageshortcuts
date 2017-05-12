@@ -22,6 +22,7 @@ class BackendAjax extends Backend {
     if (!$this->checkPermission($pageId)) {
       return;
     }
+    
 
 		if ($mode != '') {
 
