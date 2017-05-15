@@ -1,22 +1,32 @@
 <?php
 
-
 namespace Dmkzwo\Pageshortcuts;
 
+/**
+ * Class PageStatus
+ *
+ * @copyright  DMKZWO GmbH 2017
+ * @author     Thomas Schabacher
+ * @package    Pageshortcuts
+ */
 class PageStatus extends \Backend {
 
 
+  /**
+   * adds links to label
+   * @param array $row
+   * @param string $label
+   * @param DataContainer $dc
+   * @param string $imageAttribute
+   * @return string
+   */
   public function addToLabel($row, $label, $dc, $imageAttribute) {
-
-
 
     $newLabel = $label;
 
     if ($row['pid'] != '0') {
 
       $newLabel .= ' <a href="javascript:;" onclick="dzToggleSearch('.$row['id'].');$j(this).toggleClass(\'search\');$j(this).toggleClass(\'nosearch\');" class="'.(($row['noSearch'] == 1) ? 'no' : '').'search">s</a>';
-
-      //$newLabel .= ' <a href="javascript:;" onclick="dzToggleSitemap('.$row['id'].');$j(this).toggleClass(\'sitemap\');$j(this).toggleClass(\'nositemap\');" class="'.(($row['sitemap_ignore'] == 1) ? 'no' : '').'sitemap">xml</a>';
 
       if (strlen($row['robots'])) {
         $robots = explode(',', $row['robots']);
@@ -29,7 +39,6 @@ class PageStatus extends \Backend {
       } else {
         $newLabel .= ' <a href="javascript:;" onclick="dzToggleCache('.$row['id'].', $j(this));" class="parentcache">--</a>';
       }
-
 
     }
 

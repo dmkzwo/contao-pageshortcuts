@@ -5,6 +5,13 @@ define('TL_MODE', 'BE');
 require($_SERVER["DOCUMENT_ROOT"].'/system/initialize.php');
 
 
+/**
+ * Class BackendAjax
+ *
+ * @copyright  DMKZWO GmbH 2017
+ * @author     Thomas Schabacher
+ * @package    Pageshortcuts
+ */
 class BackendAjax extends Backend {
 
 	public function __construct()	{
@@ -52,6 +59,12 @@ class BackendAjax extends Backend {
     
 	}
 
+
+  /**
+   * check page permissions
+   * @param int $pageId
+   * @return boolean
+   */
 	protected function checkPermission($pageId) {
 
 	  $this->import('Database');
